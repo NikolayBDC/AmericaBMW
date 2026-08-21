@@ -32,6 +32,17 @@
             background: transparent !important;
             border: 1px solid !important;
             transition: background 0.3s ease, color 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 0.9rem 1.8rem;
+            border-radius: 999px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            font-size: 0.95rem;
+            cursor: pointer;
         }
         .button-social.whatsapp {
             border-color: #25D366 !important;
@@ -47,7 +58,7 @@
         .button-social.telegram:hover {
             background: rgba(0, 136, 204, 0.1) !important;
         }
-        /* Карта вместо плашки */
+        /* Карта */
         .map-wrap iframe {
             width: 100%;
             height: 300px;
@@ -55,9 +66,16 @@
             border-radius: 12px;
             filter: grayscale(0.2) contrast(1.1);
         }
-        /* Убираем стиль чекбокса, если остался */
+        /* Убираем чекбокс, если остался */
         .checkbox-label {
             display: none;
+        }
+        /* Кнопки в контактной панели */
+        .contact-panel .social-buttons {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
     </style>
 </head>
@@ -293,11 +311,6 @@
                     </article>
                 </div>
             </div>
-            <!-- Кнопки мессенджеров перенесены ниже FAQ списка -->
-            <div class="shell" style="text-align: center; margin-top: 2rem;">
-                <a class="button button-social whatsapp" href="https://wa.me/qr/HJJTL7MALGM7H1" target="_blank" rel="noopener" style="margin-right: 1rem;">WhatsApp</a>
-                <a class="button button-social telegram" href="https://t.me/NikolayBDC" target="_blank" rel="noopener">Telegram</a>
-            </div>
         </section>
 
         <section class="section contact" id="contacts">
@@ -346,6 +359,11 @@
                             <div><small>Coverage</small><p>Remote-only · USA &amp; Canada</p></div>
                             <div><small>Hours</small><p>Daily<br>9:00–18:00 PT</p></div>
                             <div><small>Payment</small><p>Bitcoin (BTC)<br>&amp; Lightning</p></div>
+                        </div>
+                        <!-- Кнопки мессенджеров теперь здесь -->
+                        <div class="social-buttons">
+                            <a class="button button-social whatsapp" href="https://wa.me/qr/HJJTL7MALGM7H1" target="_blank" rel="noopener">WhatsApp</a>
+                            <a class="button button-social telegram" href="https://t.me/NikolayBDC" target="_blank" rel="noopener">Telegram</a>
                         </div>
                         <div class="map-wrap">
                             <iframe title="Bavarian Garage 92 coverage area" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-125.0,24.0,-66.0,49.0&layer=mapnik" allowfullscreen></iframe>
